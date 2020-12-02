@@ -18,7 +18,7 @@ public class InsertBatch {
 
     public static int insert() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://b2b-com.config-mysql-dev.idc.yst.com.cn:3306/config",
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/config",
                 "config","config@123");
         connection.setAutoCommit(false); //设置手动提交
         String sql = "insert into users (name,age,gender) values (?,?,?)";
