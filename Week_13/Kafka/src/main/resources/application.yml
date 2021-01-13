@@ -1,0 +1,11 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: goods
+      enable-auto-commit: true
+      auto-offset-reset: latest
+    template:
+      default-topic: goods
